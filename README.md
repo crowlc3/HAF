@@ -1,3 +1,6 @@
+Here is a classification of where all of the articles fall into:  
+
+
 Cited by Rise of HaCRS:  
 	-Automated Whitebox Fuzz Testing  
 	-CrowdMine  
@@ -14,12 +17,10 @@ Cited Rise of HaCRS:
 	-Mechanical phish  
 	-Understanding security mistakes developers make  
   
-      
 Fuzzing Generics:  
 	-A systematic review of fuzzing based on machine learning techniques  
 	-Automated Whitebox Fuzz Testing.  
-	-Fuzzing A Survey  
-  
+	-Fuzzing A Survey
   
 Fuzzing Evaluation:  
 	-Evaluating Fuzz Testing  
