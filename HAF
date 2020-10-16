@@ -1,0 +1,69 @@
+Fuzzing: A Survey
+What is a Zero Day vulnerability?
+Static analysis is done by looking through the semantics of the code and trying to discover bugs lexically. Tools for static analysis often find false positives. Dynamic analysis requires the analyst to actually execute the code in real systems, which is much more accurate. However, it requires human assistance with strong technical skills. Symbolic execution works by creating a set of constraints on each program path and then going back and solving the constraints after execution. A difficulty arises when trying to scale up to larger programs, such as too many paths to go down which the constraint solver cannot handle, or trying to handle calls that reach beyond the execution enviornment. The best solution now is fuzzing! Fuzzers keep track of the execution state during its run time. It looks out for things like system signals and crashes. Fuzzers remember which inputs caused these system reactions so the user can recreate it for analysis.
+AFL
+Return
+AFL Limitations:
+AFL is a coverage guided greybox fuzzer. CGF is much faster and better than symbolic execution. “If AFL does not cover some program regions, it will not find bugs in those regions.” AFL mutates inputs based on user given seeds of input. AFL relies on coverage and instrumentation to find interesting branches to go down in the control flow graph. Each time it finds a new branch with a new amount of branch hits, it has achieved new coverage. AFL does not pay attention to how it should mutate bytes to cover specific parts of the program.
+Driller
+Fuzzer Limitations:
+the generation of “specific” input to pass complex checks in the application (i.e., checks that require inputs with one of very few specific values) is very challenging for fuzzers.
+ Driller will not try to solve for the if statement on line 3 more than once, even though it is used for different comparisons. Additionally, inputs which have one or two additional matching characters 14 would not be considered interesting by AFL. Of course if the entire string was discovered by Driller, AFL would find it interesting and adopt it. Driller attempts to mitigate the effects of this problem with the symbolic explorer stub (described in V-D3) invoked at each new state transition. However, we believe this is an imperfect solution and ultimately a better representation of state might be required.
+Driller suffers when user input is treated differently in different components.
+Human Verification
+Benefits of Human Assistance:
+We focus on harnessing human time and energy for addressing problems that computers cannot yet tackle on their own. Although computers have advanced significantly in many respects over the last 50 years, they still do not possess the basic conceptual intelligence or perceptual capabilities that most humans take for granted. By leveraging human skills and abilities in a novel way, we hope to solve large-scale computational problems that computers cannot yet solve and begin to teach computers many of these human talents.
+Also, similar to CrowdMine, explains the importance of an incentive, such as a fun game, to utilize human assistance fully.
+Explains how to build tasks with a purpose. Some sort of fuzzing game would need to be spread out into bite size pieces that a human can digest, understand, and enjoy.
+CrowdMine
+Why is human assistance important:
+even after decades of work on automating the verification process, we continue to need human insight in a variety of tasks, including writing specifications, creating models, guiding the verification engine, debugging and error localization, and repair.
+Similar to Rise of the HaCRS, CrowdMine proposes using non expert human assistance to assist in software verification. CrowdMine finds specifications from traces based on human recognized patterns. Mentions Mechanical Turk, similarly to HaCRS.
+Rise of the HaCRS
+Why Human Assistance: 
+This shift is somewhat similar to introduction of the assembly line in manufacturing, which allowed groups of relatively unskilled workers to produce systems (such as cars) that had, until then, remained the exclusive domain of specially trained engineers. Conceptually, an assembly line “shaves off” small, easy tasks that can be carried out by a large group of people, in loose collaboration, to accomplish a complex goal.
+: by incorporating human assistance into an open-source Cyber Reasoning System, we were able to boost the number of identified bugs in our dataset by 55%, from 36 bugs (in 85 binaries) using fully-automated techniques to 56 bugs through the use of non-expert human assistance.
+The autonomous systems could not easily understand the logic underlying certain applications, and, as a result, they could not easily produce inputs that drive them to specific (insecure) states.
+
+
+
+
+DARPA just recently carried out the Cyber Grand Challenge. It was meant to push the “tool-assisted human centered” idea onto the path of full automation. This was with the hope that the tools did not need humans, and then they would be able to do things previously unheard of. However, it was quickly discovered that the knowledge of a human expert was needed. The suggested solution is to go down the path of “human assisted-tool centered” rather than the other way around. The tools do the vulnerability analysis while the humans add their expertise to different sub tasks, which the tools then in turn use to further their analysis. Automated program analysis has come about with the intent to be able to find software issues on a large scale, rather than relying on humans to sift through code painstakingly to find bugs. The issue with automated program analysis is apparent when the systems have trouble understanding the logic of certain applications. Humans could give hints to the program to tell the tools what they might consider using as inputs. This issue became apparent at the DEFCON CTF.
+
+They found that with human assistance the amount of identified bugs went from 36 bugs to 56 bugs with the use of non-expert human assistance. Handing out these smaller tasks to humans help “bridge the semantic gap” of the automated analysis. This was placed on top of a system called Mechanical Phish.
+
+Organization Agent: Overall intelligence, keeps track of progress
+Innovation Agent: Carries out micro tasks
+Selection Agent: Determines valid results
+These are the positions that computers and humans can take in computation
+
+These three roles create the acronyms of who is taking what role. HCC is a human organization agent, computer innovation agent, and a computer selection agent. When a human assists with fuzzing, by creating inputs it is an HCH system.
+
+All analysis done by HaCRS takes place on binaries. Mechanical Phish is stateless, everything gets analyzed and re-analyzed from scratch. It has many organizational components.
+Organization Agents
+Task creator: A task specific creator will schedule its own tasks. These task specific creators do not interact unless the results of the previous task influence current tasks.
+Task scheduler: A task is assigned priority and is then scheduled.
+Environment interaction: Handles retrieval of input into the system and exposure of output out of the system.
+Selection Agents
+Vulnerability triaging: When something like a crash is discovered this component sees if this can be turned into an exploit.
+Exploit selection: Make sure the opponent system did not already fix the vulnerability.
+Patch Selection: Would rather an advanced technique than a simple one.
+Innovation Agents
+Vulnerability discovery: “A coverage-based fuzzer is used in parallel with a symbolic tracing technique to produce inputs that maximize code coverage”
+Exploitation: many agents are used
+Patching: patches vulnerabilities found in the binary
+Fuzzing
+Uses AFL
+Requires input that exercises some functionality
+Eventually the fuzzer will get stuck
+Drilling
+Concolic execution to mitigate the fuzzer stalling.
+It works by diverting a path, and it forces it to satisfy something it would have previously glossed over.
+One downside is the SMT solver, which may never terminate its solving process. Here is where a human assistant might be able to assist.
+Earlier paths might prevent later paths to deviate. Humans can easily reason about path predicates compared to the algorithms.
+Obviously Driller cannot understand the semantics of a program, while a human can.
+The biggest limitation of automated input techniques comes about when they get stuck during program exploration. The HaCRS method uses human assistance as innovation agents, and keeps the organizational and selectional agents fully automated. The way that human assistance actually comes into play is through an interface called the Human Automation Link.
+	One obviously important aspect of human assistance is the level of expertise needed. Higher level expert humans can be very hard to find, and expensive. The most likely and easily scalable solution is to use non experts. There are also semi-experts like graduate students studying Computer Science. The human assistance is meant to try to create input that will generate execution in some area of the program that has not been reached yet. HaCRS also interestingly allows humans to view other test cases generated by humans. HaCRS suggests different routes a human might take in diverting the program flow through the use of symbolic tokens.
+	The Human Automation Link used by HaCRS was composed of many components to make human understanding easier. Something as simple as a description of what the program is supposed to do was a part of the HAL. This allowed humans to reason about the logic of the program. They are also given instructions and examples of interaction. The human can also end the program when it decides there are no more paths to go down, or when the computer realizes the rest of the branches are dead code. Lookup DECREE programs. Lookup STONESOUP.
+
+Talk to dan about looking into other machines, when does automated fuzzing fail
