@@ -1,6 +1,14 @@
 Fuzzing: A Survey
 What is a Zero Day vulnerability?
-Static analysis is done by looking through the semantics of the code and trying to discover bugs lexically. Tools for static analysis often find false positives. Dynamic analysis requires the analyst to actually execute the code in real systems, which is much more accurate. However, it requires human assistance with strong technical skills. Symbolic execution works by creating a set of constraints on each program path and then going back and solving the constraints after execution. A difficulty arises when trying to scale up to larger programs, such as too many paths to go down which the constraint solver cannot handle, or trying to handle calls that reach beyond the execution enviornment. The best solution now is fuzzing! Fuzzers keep track of the execution state during its run time. It looks out for things like system signals and crashes. Fuzzers remember which inputs caused these system reactions so the user can recreate it for analysis.
+Static analysis is done by looking through the semantics of the code and trying to discover bugs lexically. Tools for static analysis often find false positives. Dynamic analysis requires the analyst to actually execute the code in real systems, which is much more accurate. However, it requires human assistance with strong technical skills. Symbolic execution works by creating a set of constraints on each program path and then going back and solving the constraints after execution. A difficulty arises when trying to scale up to larger programs, such as too many paths to go down which the constraint solver cannot handle, or trying to handle calls that reach beyond the execution enviornment. The best solution now is fuzzing! Fuzzers keep track of the execution state during its run time. It looks out for things like system signals and crashes. Fuzzers remember which inputs caused these system reactions so the user can recreate it for analysis. During the analysis stage, debuggers often help to find the root cause.
+
+There are 2 types of fuzzers, generation based and mutation based. Generation based fuzzers require the user to understand the program input. You don't always have clear understanding of the program, or good documentation so sometimes doing the analysis is required, which is hard work. This is where the benefits of mutation based fuzzers outweigh the issues of generation based ones. All the mutation based fuzzer needs is a valid set of inputs. Gray box fuzzers actually work without access to the source code, but it does discover information with program analysis. AFL is a graybox fuzzer! It is also mutation based. While there are 2 different types of classifications of fuzzers, directed fuzzers and coverage-based fuzzers, the key issue becomes how does one extract information from the paths that were executed?
+
+research sanitizers
+
+complicated file formats are hard to guess in the mutation phase.
+
+One of the most important things a mutation based fuzzer must do is decide where and how to mutate the input. This is because only certain inputs would actually affect the control flow.
 AFL
 Return
 AFL Limitations:
