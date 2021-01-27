@@ -27,3 +27,5 @@ Fuzzing Evaluation:
 	-Fuzzing On the Exponential Cost of Vulnerability Discovery  
 	-Poster Automated Evaluation of Fuzzer  
 	-WEIZZ Automatic Grey Box Fuzzing for Structured Binary Formats  
+	
+	[FairFuzz.pdf](Docs/FairFuzz.pdf)
