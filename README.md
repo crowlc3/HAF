@@ -2,7 +2,7 @@
 
 
 
-# Game Theory
+# Game Design
 [FronteirsofaParadigm.pdf](papers/FronteirsofaParadigm.pdf)  
 [ImprovingFuzzTestingUsingGameTheory.pdf](papers/ImprovingFuzzTestingUsingGameTheory.pdf)  
 [KissKissBan.pdf](papers/KissKissBan.pdf)  
@@ -28,4 +28,8 @@
 [MechanicalPhishResilientAUtonomousHacking.pdf](papers/MechanicalPhishResilientAUtonomousHacking.pdf)  
 [PosterAutomatedEvaluationofFuzzers.pdf](papers/PosterAutomatedEvaluationofFuzzers.pdf)  
 [RethinkingtheEconomicsofSoftwareEngineering.pdf](papers/RethinkingtheEconomicsofSoftwareEngineering.pdf)  
-[RiseoftheHaCRS.pdf](papers/RiseoftheHaCRS.pdf)
+[RiseoftheHaCRS.pdf](papers/RiseoftheHaCRS.pdf)  
+[ZeroDay.pdf](papers/ZeroDay.pdf)  
+[Tfuzz.pdf](papers/Tfuzz.pdf)  
+[technical_detailsAFL.txt](papers/technical_details.txt)  
+[CoverageBasedGreyboxFuzzingasMarkovChain.pdf](papers/CoverageBasedGreyboxFuzzingasMarkovChain.pdf)  
