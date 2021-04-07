@@ -1,18 +1,6 @@
 ## Paper Classifications
 
 
-
-# Game Design
-[FronteirsofaParadigm.pdf](papers/FronteirsofaParadigm.pdf)  
-[ImprovingFuzzTestingUsingGameTheory.pdf](papers/ImprovingFuzzTestingUsingGameTheory.pdf)  
-[KissKissBan.pdf](papers/KissKissBan.pdf)  
-# Human Computation
-[ASurveyofHumanComputationSystems.pdf](papers/ASurveyofHumanComputationSystems.pdf)  
-[CrowdMineTowardsCrowdsourcedHumanAssistedVerification.pdf](papers/CrowdMineTowardsCrowdsourcedHumanAssistedVerification.pdf)  
-[Hermes.pdf](papers/Hermes.pdf)  
-[HumanComputation.pdf](papers/HumanComputation.pdf)  
-[TellingHumansandComputersApart.pdf](papers/TellingHumansandComputersApart.pdf)  
-[TheImpactofCompetitionsonPlayerActivityinaHumanComputationGame.pdf](papers/TheImpactofCompetitionsonPlayerActivityinaHumanComputationGame.pdf)  
 # Fuzzing
  
 [ASystematicReviewofFuzzingBasedonMachineLearningTechniques.pdf](papers/ASystematicReviewofFuzzingBasedonMachineLearningTechniques.pdf)  
@@ -33,3 +21,19 @@
 [Tfuzz.pdf](papers/Tfuzz.pdf)  
 [technical_detailsAFL.txt](papers/technical_details.txt)  
 [CoverageBasedGreyboxFuzzingasMarkovChain.pdf](papers/CoverageBasedGreyboxFuzzingasMarkovChain.pdf)  
+[AFL++.pdf](papers/AFL++.pdf)  
+[CGC.pdf](papers/CGC.pdf)  
+[GamesWithAProblem.pdf](papers/GamesWithAProblem.pdf)  
+
+# Game Design
+[FronteirsofaParadigm.pdf](papers/FronteirsofaParadigm.pdf)  
+[ImprovingFuzzTestingUsingGameTheory.pdf](papers/ImprovingFuzzTestingUsingGameTheory.pdf)  
+[KissKissBan.pdf](papers/KissKissBan.pdf)  
+
+# Human Computation
+[ASurveyofHumanComputationSystems.pdf](papers/ASurveyofHumanComputationSystems.pdf)  
+[CrowdMineTowardsCrowdsourcedHumanAssistedVerification.pdf](papers/CrowdMineTowardsCrowdsourcedHumanAssistedVerification.pdf)  
+[Hermes.pdf](papers/Hermes.pdf)  
+[HumanComputation.pdf](papers/HumanComputation.pdf)  
+[TellingHumansandComputersApart.pdf](papers/TellingHumansandComputersApart.pdf)  
+[TheImpactofCompetitionsonPlayerActivityinaHumanComputationGame.pdf](papers/TheImpactofCompetitionsonPlayerActivityinaHumanComputationGame.pdf)  
