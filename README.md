@@ -40,3 +40,17 @@ Current Writeup:https://www.overleaf.com/read/sdyczjzvgrbj
 [HumanComputation.pdf](papers/HumanComputation.pdf)  
 [TellingHumansandComputersApart.pdf](papers/TellingHumansandComputersApart.pdf)  
 [TheImpactofCompetitionsonPlayerActivityinaHumanComputationGame.pdf](papers/TheImpactofCompetitionsonPlayerActivityinaHumanComputationGame.pdf)  
+
+## Human Computation Systems
+
+# Initiatory Human Computation
+[reCAPTCHA](https://www.google.com/recaptcha/about/)
+[KA-CAPTCHA](https://www.aaai.org/Papers/AAAI/2007/AAAI07-209.pdf)
+
+# Distributed Human Computation
+[Razor](http://razor.sourceforge.net/)
+[Wikipedia](https://en.wikipedia.org/wiki/Main_Page)
+[Amazon Mechanical Turk](https://www.mturk.com/)
+
+# Social Game-based Human Computation
+[ESP Game]
