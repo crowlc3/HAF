@@ -43,14 +43,18 @@ Current Writeup:https://www.overleaf.com/read/sdyczjzvgrbj
 
 ## Human Computation Systems
 
-# Initiatory Human Computation
-[reCAPTCHA](https://www.google.com/recaptcha/about/)
-[KA-CAPTCHA](https://www.aaai.org/Papers/AAAI/2007/AAAI07-209.pdf)
+# Initiatory Human Computation  
+[reCAPTCHA](https://www.google.com/recaptcha/about/)  
+[KA-CAPTCHA](https://www.aaai.org/Papers/AAAI/2007/AAAI07-209.pdf)  
 
-# Distributed Human Computation
-[Razor](http://razor.sourceforge.net/)
-[Wikipedia](https://en.wikipedia.org/wiki/Main_Page)
-[Amazon Mechanical Turk](https://www.mturk.com/)
+# Distributed Human Computation  
+[Razor](http://razor.sourceforge.net/)  
+[Wikipedia](https://en.wikipedia.org/wiki/Main_Page)  
+[Amazon Mechanical Turk](https://www.mturk.com/)  
 
-# Social Game-based Human Computation
-[ESP Game]
+# Social Game-based Human Computation  
+[ESP Game]  
+[Kiss Kiss Ban](https://dl.acm.org/doi/pdf/10.1145/1600150.1600153?casa_token=1wJb1bR-wjwAAAAA:SBjo49uHGDzWmwxxFwxoiGPZYH2SHu3YVEvEBufCHiSmjdq6rS-dD8orjwwRa_XcqHJp7iY2ZQ2p)  
+[Wildfire Wally](https://dl.acm.org/doi/pdf/10.1145/1328202.1328250?casa_token=fYvPaAK7wIwAAAAA:S9Rjv-BMks1knan0FvCLYhSWqZOYSs9uDUm9GEFo9B1LnELPtFIG5O2TWi0KUM1pucGcQCdZVSVG)  
+[Peekaboom](https://dl.acm.org/doi/pdf/10.1145/1124772.1124782?casa_token=ayltJYmmccAAAAAA:RTyMrfLUScNiC7ilGjxfjwLXzHDqaQRa_hDd5HVxy3YIwT5VYfD0sGwHflnzICX78vHoOFTi-yRx)  
+[Tagatune](https://www.cs.cmu.edu/~elaw/papers/ISMIR2007.pdf)
